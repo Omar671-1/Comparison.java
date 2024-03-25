@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selected Country</title>
+</head>
+<body>
+<p id="selectedCountry"></p>
+<script src="script.js"></script>
+<script>
+  // Function to get URL parameters
+  function getUrlParameter(name) {
+    name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  };
+
+  // Get the selected country from URL
+  var selectedCountry = getUrlParameter('country');
+  
+  // Display the selected country
+  document.getElementById("selectedCountry").innerText = "Selected Country: " + selectedCountry;
+</script>
+</body>
+</html>

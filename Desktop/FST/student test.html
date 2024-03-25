@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Events Demo</title>
+    <script src="events.js" defer></script>
+</head>
+<body>
+    <h1>JavaScript Events Demo</h1>
+
+    <button id="clickButton" onclick="handleClick()">Click Me</button>
+    <input type="text" id="inputField" oninput="handleInput(event)">
+    <div id="hoverDiv" style="width: 100px; height: 100px; background-color: lightblue;" onmouseover="handleMouseOver()">Hover over me</div>
+
+    <p>Event Log:</p>
+    <ul id="eventLog">
+
+    </ul>
+
+</body>
+</html>
